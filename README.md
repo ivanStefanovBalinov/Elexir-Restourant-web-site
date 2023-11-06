@@ -1,7 +1,5 @@
 # Elexir-Restourant-web-site
 
-# Elixir Restaurant Web Application
-
 Welcome to the Elixir Restaurant web application repository. This project is built using Redux, React, Node.js, Express.js, Sass, Axios, and other libraries.
 
 ## Getting Started
