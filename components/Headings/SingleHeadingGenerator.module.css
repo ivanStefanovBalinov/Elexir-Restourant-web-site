@@ -1,0 +1,331 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #fff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+body {
+    margin: 0 auto;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    a:hover {
+        color: #747bff;
+    }
+    button {
+        background-color: #f9f9f9;
+    }
+}
+/* Import fonts */
+/* Bitter */
+/* Bitter Bold */
+@font-face {
+    font-family: 'Bitter Bold', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/bitter/bitter_bold.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* Bitter Regular */
+@font-face {
+    font-family: 'Bitter Regular', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./assets/fonts/bitter/bitter_regular.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* Bitter Italic */
+@font-face {
+    font-family: 'Bitter Italic', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./assets/fonts/bitter/bitter_italic.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* Lobster Two */
+/* Lobster Two Bold */
+@font-face {
+    font-family: 'Lobster Two Bold', cursive;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./assets/fonts/lobster/lobster_two_bold.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Lobster Two Bold Italic */
+@font-face {
+    font-family: 'Lobster Two Bold Italic', cursive;
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./assets/fonts/lobster/lobster_two_bold_italic.woff2')
+        format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Lobster Two Italic */
+@font-face {
+    font-family: 'Lobster Two Italic';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./src/assets/fonts/lobster/lobster_two_italic.woff2')
+        format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Lobster Two Regular */
+@font-face {
+    font-family: 'Lobster Two Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./assets/fonts/lobster/lobster_two_regular.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Oswald Light */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/oswald/Oswald-Light.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.slideSeparator h1 {
+    color: #ffffff;
+    position: relative;
+    font-size: 46px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-family: 'Bitter Regular', serif;
+}
+.slideSeparator h1::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../src/assets/images/slide-separator.png');
+    width: 148px;
+    height: 22px;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 0;
+}
+.slideSeparator h1 h5 {
+    color: #c8c7c5;
+    font-family: 'Bitter Regular', serif;
+}
+
+.headerDecorator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headerDecorator div {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: baseline;
+}
+.headerDecorator div img {
+    width: 50px;
+    height: 11px;
+}
+.headerDecorator div h3 {
+    color: #3a3939;
+    position: relative;
+    font-size: 36px;
+    margin: 0;
+    font-family: 'Bitter Regular', serif;
+}
+
+.colorTextGreen h2 {
+    color: #00a056;
+    font-size: 36px;
+    line-height: 20px;
+    text-transform: capitalize;
+    font-style: 'Lobster Two Bold Italic', cursive;
+}
+
+.timetableDecorator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.timetableDecorator div {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.timetableDecorator div img {
+    width: 200px;
+    height: 110px;
+}
+
+h2 {
+    color: #ebebeb;
+    position: relative;
+    font-size: 46px;
+    margin: 20px 20px 0px 20px;
+    font-family: 'Bitter Regular', serif;
+}
+h2 h5 {
+    color: #e90015;
+    margin: 0;
+    font-family: 'Bitter Regular', serif;
+}
+
+.menuGreen h3 {
+    color: #309f50;
+    font-size: 36px;
+    line-height: 30px;
+    font-family: 'Bitter Regular', serif;
+}
+
+.bottomLine div {
+    display: flex;
+    align-items: baseline;
+}
+.bottomLine img {
+    width: 435px;
+    height: 16px;
+}
+.bottomLine h3 {
+    color: #773e23;
+    position: relative;
+    font-size: 46px;
+    margin: 10px 10px -10px 10px;
+    font-family: 'Bitter Regular', serif;
+}
+.bottomLine h5 {
+    color: #309f50;
+    font-family: 'Bitter Regular', serif;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.mTop10 {
+    margin-top: 10px;
+}
+
+.mBottom10 {
+    margin-bottom: 10px;
+}
+
+.mBoth10 {
+    margin: 10px 0;
+}
+
+.mTop15 {
+    margin-top: 15px;
+}
+
+.mBottom15 {
+    margin-bottom: 15px;
+}
+
+.mBoth15 {
+    margin: 15px 0;
+}
+
+.mTop20 {
+    margin-top: 20px;
+}
+
+.mBottom20 {
+    margin-bottom: 20px;
+}
+
+.mBoth20 {
+    margin: 20px 0;
+}
+
+.mTop30 {
+    margin-top: 30px;
+}
+
+.mBottom30 {
+    margin-bottom: 30px;
+}
+
+.mBoth30 {
+    margin: 30px 0;
+}
+
+.mTop40 {
+    margin-top: 40px;
+}
+
+.mBottom40 {
+    margin-bottom: 40px;
+}
+
+.mBoth40 {
+    margin: 40px 0;
+} /*# sourceMappingURL=SingleHeadingGenerator.module.css.map */

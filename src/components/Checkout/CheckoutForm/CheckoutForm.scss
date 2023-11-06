@@ -1,0 +1,35 @@
+.information {
+    width: 80%;
+    margin: 50px auto;
+    padding: 80px;
+    box-shadow: -5px 5px 10px 3px rgba(0, 0, 0, 0.301);
+    color: darkred;
+
+    h1 {
+        font-size: 35px;
+        font-style: italic;
+        color: darkred;
+    }
+
+    form {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: left;
+
+        input {
+            margin: 5px 0;
+            background-color: unset;
+            border-radius: 10px;
+            border: solid 1px black;
+            color: black;
+            padding: 10px;
+
+            &.required {
+                border: solid 3px darkred;
+                color: darkred;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import '../../../../../index.scss';
+
+tr {
+    height: 70px;
+
+    :not(:first-child) {
+        border-bottom: 1px solid $secondary-red;
+    }
+
+    td {
+        .td-text {
+            color: $primary-white;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+
+    .row-cancel-reservation {
+        .cancel-icon {
+            color: $third-red;
+            font-size: 25px;
+            cursor: pointer;
+
+            &:hover {
+                color: $secondary-red;
+                animation: spinner 0.5s linear;
+            }
+        }
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+        font-size: 35px;
+        color: $primary-green;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

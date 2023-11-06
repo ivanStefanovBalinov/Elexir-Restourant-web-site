@@ -1,0 +1,80 @@
+@import '../../../../../index.scss';
+.spreadsheet-wrapper {
+    margin: 0 auto 150px;
+    background-color: rgba(0, 0, 0, 0.493);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(100px);
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    table {
+        border-collapse: collapse;
+        padding: 20px;
+        thead {
+            tr {
+                height: 90px;
+
+                :not(:first-child) {
+                    border-bottom: 1px solid $secondary-red;
+                }
+                th {
+                    padding: 5px;
+                    color: $primary-white;
+                }
+                .th-num {
+                    width: 50px;
+                }
+                .th-spot-title {
+                    width: 200px;
+                }
+                .th-smoker-status {
+                    width: 160px;
+                }
+                .th-reservation-date {
+                    width: 250px;
+                }
+                .th-reservation-hour {
+                    width: 200px;
+                }
+                .th-cancel-reservation {
+                    width: 200px;
+                    text-align: right;
+                }
+                .th-zone {
+                    width: 160px;
+                }
+            }
+        }
+    }
+    .pagination-row-wrapper {
+        display: flex;
+        margin: 20px auto;
+        gap: 15px;
+        align-items: center;
+
+        .pagination-btn {
+            background-color: transparent;
+            border: none;
+            color: $primary-red;
+            font-size: 20px;
+            &:disabled {
+                color: #6b6666af;
+            }
+        }
+
+        .pagination-p {
+            color: $primary-white;
+            margin: 0;
+        }
+    }
+    .total-reservations {
+        color: $primary-red;
+        font-style: italic;
+        position: absolute;
+        bottom: 9px;
+        right: 70px;
+    }
+}

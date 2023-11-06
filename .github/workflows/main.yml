@@ -1,0 +1,21 @@
+name: Code Formatting
+
+on:
+    pull_request:
+        types:
+            - opened
+            - synchronize
+
+jobs:
+    code-formatting:
+        runs-on: ubuntu-20.04
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Install Dependencies
+              run: npm install
+
+            - name: Format Code with Prettier
+              run: npx prettier --check "**/*.jsx"

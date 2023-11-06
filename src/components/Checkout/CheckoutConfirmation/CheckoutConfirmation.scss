@@ -1,0 +1,77 @@
+.wrapper {
+    width: 50%;
+    padding: 40px 20px;
+    box-shadow: -5px 5px 10px 3px rgba(0, 0, 0, 0.301);
+
+    h1 {
+        color: darkred;
+        font-size: 35px;
+        font-style: italic;
+    }
+
+    .orderList {
+        margin: 30px 20px;
+
+        p {
+            margin: 0;
+        }
+
+        .singleOrder {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-top: solid 1px rgba(0, 0, 0, 0.219);
+
+            :first-child {
+                border: unset;
+            }
+
+            .product {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 5px;
+
+                .price {
+                    font-style: italic;
+                }
+            }
+        }
+
+        :first-child {
+            border: unset;
+        }
+
+        .prices {
+            text-align: right;
+
+            .total {
+                text-align: right;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .removeButton {
+        color: rgba(139, 0, 0, 0.733);
+        border: solid 2px rgba(139, 0, 0, 0.733);
+        border-radius: 100%;
+        height: 35px;
+        width: 35px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .checkoutButton {
+        background: rgb(211, 0, 0);
+        width: 95%;
+        border: none;
+        padding: 5px;
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+}

@@ -1,0 +1,165 @@
+@import '../../../index.scss';
+
+@keyframes test {
+    0% {
+        top: 10%;
+        opacity: 1;
+    }
+
+    50% {
+        top: 50%;
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.1;
+        top: 60%;
+    }
+
+    100% {
+        opacity: 0;
+        top: 80%;
+    }
+}
+
+.headerSlider {
+    :global {
+        @media screen and (max-width: 768px) {
+            .slick-arrow {
+                display: none !important;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        min-width: 700px;
+    }
+}
+
+.headerBox {
+    position: relative;
+}
+
+.SliderWrapper {
+    background-color: rgba(0, 0, 0, 0.175);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5%;
+    justify-content: flex-start;
+    padding-top: 3%;
+
+    .sliderLogo {
+        height: 40%;
+        width: 25%;
+        min-width: 200px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        justify-content: flex-start;
+        row-gap: 5%;
+    }
+
+    .animatedHeadline {
+        position: relative;
+        height: 15%;
+        width: 100%;
+
+        .headline {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            width: 80%;
+
+            font-size: 60px;
+            font-weight: 500;
+            letter-spacing: 6px;
+            font-family: $oswalt;
+            color: $primary-white;
+
+            transition: 0.7s;
+            transform: translate(-50%, 50%);
+
+            @media screen and (max-width: 1024px) {
+                font-size: 35px;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+        :global {
+            .enter {
+                opacity: 1;
+                display: block;
+                bottom: 50%;
+                transition-delay: 0.2s;
+            }
+
+            .enter.enter-active {
+                opacity: 1;
+                transition: opacity 500ms ease-in;
+                bottom: 0%;
+            }
+
+            .exit-done {
+                opacity: 0;
+                bottom: 0%;
+            }
+
+            .exit.exit-active {
+                opacity: 0.01;
+                transition: opacity 300ms ease-in;
+                bottom: 20%;
+                transition: 0.4s;
+            }
+        }
+    }
+
+    .sliderSeparator {
+        width: 10%;
+        min-width: 80px;
+    }
+
+    .mainSliderMsg {
+        font-style: italic;
+        font-size: 25px;
+        letter-spacing: 1px;
+        font-weight: 200;
+        color: $primary-white;
+
+        @media screen and (max-width: 768px) {
+            font-size: 10px;
+        }
+    }
+
+    .downArrow {
+        background: none;
+        border: solid 2px;
+        cursor: pointer;
+        border-radius: 100%;
+        width: 3vw;
+        height: 3vw;
+        min-width: 20px;
+        min-height: 20px;
+        position: absolute;
+
+        bottom: 4%;
+
+        img {
+            animation: test infinite 1s linear;
+            width: 40%;
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+}

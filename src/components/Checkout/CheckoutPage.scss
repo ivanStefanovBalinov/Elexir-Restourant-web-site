@@ -1,0 +1,12 @@
+.checkoutWrapper {
+    margin-top: 100px;
+
+    .confirmationWrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: 50px;
+        margin: 0 auto;
+        width: 80%;
+    }
+}

@@ -1,0 +1,355 @@
+@import '../../../../../../index.scss';
+
+.eight-people-table-wrapper {
+    position: absolute;
+    width: 160px;
+    height: 220px;
+    bottom: 16%;
+    left: 8%;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 10px $primary-red;
+    }
+
+    .eight-people-table {
+        width: 40px;
+        height: 180px;
+        margin: 19px auto;
+        border-top: 3px solid $primary-black;
+        border-bottom: 3px solid $primary-black;
+        border-left: 1px solid $primary-black;
+        border-right: 1px solid $primary-black;
+        border-radius: 5px;
+        pointer-events: none;
+
+        .eight-people-table-number {
+            font-size: 15px;
+            transform: rotate(90deg);
+            width: 50px;
+            margin-top: 70px;
+            height: 15px;
+        }
+    }
+}
+
+.four-people-table-main-wrapper {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    cursor: pointer;
+    transform: rotate(315deg);
+
+    &:hover {
+        box-shadow: 0px 0px 10px $primary-red;
+    }
+
+    .four-people-table-main {
+        width: 60px;
+        height: 60px;
+        border: 1px solid $primary-black;
+        margin: 35px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        pointer-events: none;
+    }
+
+    .four-people-table-main-number {
+        margin: 0;
+        transform: rotate(45deg);
+        font-size: 14px;
+    }
+}
+
+.four-people-table-terrace-wrapper {
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    cursor: pointer;
+    transform: rotate(315deg);
+
+    &:hover {
+        box-shadow: 0px 0px 10px $primary-red;
+    }
+
+    .four-people-table-terrace {
+        width: 50px;
+        height: 50px;
+        border: 1px solid $primary-black;
+        border-radius: 3px;
+        margin: 33px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        pointer-events: none;
+    }
+
+    .four-people-table-terrace-number {
+        margin: 0;
+        transform: rotate(45deg);
+        font-size: 15px;
+        line-height: 15px;
+    }
+}
+
+.seven-people-table-wrapper {
+    position: absolute;
+    width: 130px;
+    height: 210px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 10px $primary-red;
+    }
+
+    .seven-people-table {
+        width: 35px;
+        height: 140px;
+        border-top: 3px solid $primary-black;
+        border-bottom: 3px solid $primary-black;
+        border-left: 1px solid $primary-black;
+        border-right: 1px solid $primary-black;
+        border-radius: 5px;
+        margin: 35px auto;
+        pointer-events: none;
+    }
+
+    .seven-people-table-number {
+        font-size: 15px;
+        transform: rotate(90deg);
+        width: 60px;
+        height: 0px;
+        margin-top: 70px;
+    }
+}
+
+.two-people-table-wrapper {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transition: ease 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 10px $primary-red;
+    }
+
+    .two-people-table {
+        width: 40px;
+        height: 60px;
+        margin: 20px auto;
+        border: 1px solid $primary-black;
+        border-radius: 5px;
+        pointer-events: none;
+        position: relative;
+    }
+
+    .two-people-table-number {
+        font-size: 15px;
+        transform: rotate(90deg);
+        height: 30px;
+        line-height: 17px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .eight-people-table-wrapper {
+        width: 120px;
+        height: 170px;
+
+        .eight-people-table {
+            width: 30px;
+            height: 150px;
+            margin: 10px auto;
+
+            .eight-people-table-number {
+                font-size: 0.8rem;
+                width: 40px;
+            }
+        }
+    }
+
+    .four-people-table-main-wrapper {
+        width: 100px;
+        height: 100px;
+
+        .four-people-table-main {
+            width: 40px;
+            height: 40px;
+            margin: 32px 29.5px;
+
+            .four-people-table-main-number {
+                font-size: 0.7rem;
+            }
+        }
+    }
+
+    .four-people-table-terrace-wrapper {
+        width: 85px;
+        height: 85px;
+
+        .four-people-table-terrace {
+            width: 33px;
+            height: 33px;
+            margin: 28px 25px;
+
+            .four-people-table-terrace-number {
+                font-size: 0.7rem;
+            }
+        }
+    }
+
+    .seven-people-table-wrapper {
+        width: 90px;
+        height: 170px;
+
+        .seven-people-table {
+            width: 25px;
+            height: 115px;
+            margin: 28px 32px;
+
+            .seven-people-table-number {
+                font-size: 0.7rem;
+                width: 43px;
+                margin-top: 54px;
+            }
+        }
+    }
+
+    .two-people-table-wrapper {
+        width: 70px;
+        height: 70px;
+
+        .two-people-table {
+            width: 27px;
+            height: 49px;
+            margin: 12px 21px;
+
+            .two-people-table-number {
+                font-size: 0.6rem;
+                line-height: normal;
+                margin: 14px 0px 0px;
+                transform: none;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .eight-people-table-wrapper {
+        width: 60px;
+        height: 89px;
+
+        .eight-people-table {
+            width: 16px;
+            height: 73px;
+            margin: 10px 21.2px;
+            border-top: 1.5px solid $primary-black;
+            border-bottom: 1.5px solid $primary-black;
+            border-left: 0.5px solid $primary-black;
+            border-right: 0.5px solid $primary-black;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .eight-people-table-number {
+                margin: 0;
+                font-size: 0.35rem;
+                width: 40px;
+            }
+        }
+    }
+
+    .four-people-table-main-wrapper {
+        width: 50px;
+        height: 50px;
+
+        .four-people-table-main {
+            width: 20px;
+            height: 20px;
+            margin: 16px 13.5px;
+
+            .four-people-table-main-number {
+                font-size: 0.35rem;
+            }
+        }
+    }
+
+    .four-people-table-terrace-wrapper {
+        width: 45px;
+        height: 45px;
+
+        .four-people-table-terrace {
+            width: 19px;
+            height: 19px;
+            margin: 14px 11.5px;
+
+            .four-people-table-terrace-number {
+                font-size: 0.32rem;
+                line-height: normal;
+            }
+        }
+    }
+
+    .seven-people-table-wrapper {
+        width: 40px;
+        height: 90px;
+
+        .seven-people-table {
+            border-top: 1.5px solid $primary-black;
+            border-bottom: 1.5px solid $primary-black;
+            border-left: 0.5px solid $primary-black;
+            border-right: 0.5px solid $primary-black;
+            border-radius: 3px;
+            width: 10px;
+            height: 64px;
+            margin: 13.5px 15.2px;
+
+            .seven-people-table-number {
+                font-size: 0.35rem;
+                margin: 30px -12.5px;
+            }
+        }
+    }
+
+    .two-people-table-wrapper {
+        width: 35px;
+        height: 40px;
+
+        .two-people-table {
+            width: 13px;
+            height: 25px;
+            margin: 10px 11px;
+            border-radius: 3px;
+
+            .two-people-table-number {
+                font-size: 0.25rem;
+                line-height: normal;
+                margin: 14px 0px 0px;
+                transform: none;
+                width: 100%;
+                margin: 5px 0px;
+            }
+        }
+    }
+}

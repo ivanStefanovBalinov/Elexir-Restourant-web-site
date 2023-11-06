@@ -1,0 +1,142 @@
+@import '../../index.scss';
+
+.delivery-car-img {
+    width: 60px;
+    height: 60px;
+}
+
+//Order Arrived Modal Styles
+
+.order-arrived-modal {
+    .pizza-image {
+        background-image: url('../../assets/img/header_slider02.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 150px;
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-header {
+        background-color: $secondary-muddy-brown;
+        border-radius: 10px 10px 0 0;
+        padding: 20px;
+    }
+
+    .modal-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $primary-white;
+        text-align: center;
+        margin-left: 120px;
+    }
+
+    .modal-body {
+        text-align: center;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .modal-footer {
+        border-top: none;
+        padding: 20px;
+    }
+
+    .btn-secondary {
+        background-color: $secondary-muddy-brown;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: #555;
+    }
+
+    .modal.show.order-arrived-modal {
+        display: flex;
+        align-items: center;
+    }
+}
+
+//Delivery timer
+.timer-wrapper {
+    max-width: 90%;
+    height: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: url('../../assets/images/pizza-background.jpg') no-repeat;
+    background-size: cover;
+    background-position: right;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    .pizza-img {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        animation: spin 10s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    h3 {
+        margin: 30px auto;
+        font-size: 24px;
+        font-weight: bold;
+        color: $secondary-muddy-brown;
+    }
+
+    p {
+        font-size: 16px;
+        color: #666;
+    }
+
+    .progress-bar-container {
+        height: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: #451010;
+
+        .progress-bar {
+            background-color: #aeb8ae;
+            transition: width 0.3s ease;
+        }
+    }
+
+    .delivery-message {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #555;
+    }
+}

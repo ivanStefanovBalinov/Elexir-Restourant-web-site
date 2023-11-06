@@ -1,0 +1,67 @@
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title>Email Template</title>
+        <style>
+            table {max-width: 700px; width: 100%; margin: 0 auto; box-shadow:
+            0px 0px 10px black; } .logo { width: 80px; } img { max-width: 700px;
+            width:100%; max-height: 200px; object-fit: cover; } p { max-width:
+            500px; text-align: left; margin: 5px auto; font-size: 16px;} h3 {
+            text-align: center; margin: 40px 0px 20px; } tbody {
+            background-image:
+            url("https://i.ibb.co/hMfscWm/fake-box-shadow.png");
+            background-size: cover; background-position: center; }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <img
+                            class='logo'
+                            src='https://i.ibb.co/dKStb6z/logo-elixir.png'
+                            alt='logo'
+                        />
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img
+                            src='https://i.ibb.co/VDW00LG/02.jpg'
+                            alt='pizza'
+                            width='800'
+                            height='400'
+                            style='max-width: 100%; height: auto; display: block; margin: 0 auto;'
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <th><h2>Email from {{name}}</h2></th>
+                </tr>
+                <tr>
+                    <th><p><b>Name</b>: {{name}}</p></th>
+                </tr>
+                <tr>
+                    <th><p><b>Email</b>: {{emailSender}}</p></th>
+                </tr>
+                <tr>
+                    <th><p><b>Subject</b>: {{emailSubject}}</p></th>
+                </tr>
+                <tr>
+                    <th><p><b>Message</b>: {{emailMessage}}</p></th>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Stay in touch</h3>
+        <p>
+            Email send by BootCamp-June2023
+            <br />
+            Copyright &copy; 2023 BootCamp-June2023. All rights reserved.
+        </p>
+    </body>
+</html>

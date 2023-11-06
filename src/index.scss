@@ -1,0 +1,50 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(249, 25, 25, 0.87);
+    background-color: #fff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+//-------Constant-Colors------//
+
+$third-red: #b70415;
+$primary-grey: #939393;
+$primary-green: #309f50;
+$primary-white: #ffffff;
+$primary-black: #0f0c03;
+$primary-dark-grey: #3a3939;
+$secondary-red: #dd0301;
+$primary-light-red: #ca4953;
+$primary-muddy-brown: #2a220d;
+$secondary-muddy-brown: #373014;
+$primary-red: #e90015;
+$secondary-green: #00a056;
+$secondary-light-grey: #c8c7c5;
+$primary-brown: #773e23;
+$primary-electric-green: #87a436;
+$primary-light-grey: #ebebeb;
+$secondary-dark-grey: #212121;
+$blue-ish-purple: #d8d6f3;
+
+// Add the import statement here
+@import './assets/css/fonts.scss';
+
+// Constant fonts
+$bitter-bold: 'Bitter Bold';
+$bitter-regular: 'Bitter Regular';
+$bitter-italic: 'Bitter Italic';
+
+$lobster-bold: 'Lobster Two Bold';
+$lobster-bold-italic: 'Lobster Two Bold Italic';
+$lobster-italic: 'Lobster Two Italic';
+$lobster-regular: 'Lobster Two Regular';
+
+$oswalt: 'Oswald';

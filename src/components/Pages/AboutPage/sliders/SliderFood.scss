@@ -1,0 +1,19 @@
+.sliderFood {
+    width: 450px;
+    pointer-events: none;
+
+    @media screen and (max-width: 991px) {
+        width: 100%;
+        margin: unset;
+
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    display: block;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

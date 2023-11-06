@@ -1,0 +1,42 @@
+.detailsContainer {
+    height: 80%;
+    margin: 200px auto;
+    position: relative;
+
+    .profilePicture {
+        width: 180px;
+        height: 180px;
+        border-radius: 100%;
+        position: absolute;
+        top: -170px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: blue;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .changeWallpaper {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+        }
+    }
+
+    .accountDetails {
+        padding: 50px;
+
+        form {
+            text-align: left;
+        }
+
+        .row {
+            gap: 0;
+        }
+    }
+}

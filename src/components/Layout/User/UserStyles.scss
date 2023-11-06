@@ -1,0 +1,240 @@
+@import '../../../index.scss';
+
+@keyframes dropdownAnimation {
+    0% {
+        top: -200%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes reverseDropdownAnimation {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -200%;
+    }
+}
+
+@keyframes spinImg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinImgCounterClockWise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+//User Icon
+.icon-wrapper {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: 'Profile';
+        position: absolute;
+        top: 90%;
+        right: -47%;
+        color: $primary-white;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.remove {
+    display: none;
+}
+
+.mobile-user-icon {
+    display: none;
+}
+
+//Profile Info
+.user-info {
+    position: absolute;
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    right: 10px;
+    top: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: dropdownAnimation 0.4s ease-in-out;
+
+    h4 {
+        color: $primary-white;
+        padding: 12px 0;
+        font-size: 1.3em;
+    }
+
+    .dropdown-img {
+        position: absolute;
+        width: 80px;
+        top: 50%;
+        opacity: 0.8;
+
+        &:nth-of-type(1) {
+            left: 30%;
+            animation: spin 8s linear infinite;
+        }
+
+        &:nth-of-type(2) {
+            left: 3%;
+            animation: spinImgCounterClockWise 8s linear infinite;
+            display: none;
+        }
+    }
+
+    .gadgets {
+        text-align: left;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 10px;
+        margin-top: 40px;
+
+        .gadget-description {
+            color: $primary-white;
+            font-size: 0.6em;
+            position: absolute;
+            width: 70px;
+        }
+
+        .first {
+            left: 12% !important;
+        }
+        .second {
+            left: 65%;
+        }
+
+        .orderHistory-btn,
+        .makeOrder-btn {
+            cursor: pointer;
+            transform-origin: center;
+            transition: transform 0.2s;
+            animation: none;
+
+            &:hover svg {
+                animation: heartbeat 1s;
+                transform: scale(1.1);
+                color: rgb(248, 100, 100);
+            }
+        }
+        svg {
+            color: $primary-white;
+            font-size: 1.5em;
+            cursor: pointer;
+            position: relative;
+        }
+        :nth-of-type(1) svg {
+            margin-right: 20px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-white;
+        font-weight: 600;
+        font-size: 0.5em;
+        margin-left: 10px;
+    }
+
+    .user-img {
+        width: 60px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: auto;
+        margin-left: 10px;
+    }
+}
+
+.reverse {
+    animation: reverseDropdownAnimation 0.4s ease-in-out;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+    .user-info {
+        left: 80% !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .icon-wrapper {
+        &::after {
+            display: none;
+        }
+    }
+
+    .user-info {
+        top: 100%;
+        left: 60%;
+
+        h4 {
+            text-align: center;
+            margin: 0 auto !important;
+        }
+
+        .user-img {
+            width: 50px;
+            padding-left: 10px;
+        }
+
+        h4 {
+            margin: 0 70px 0 10px;
+        }
+    }
+
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px 6px 0;
+        gap: 20px;
+    }
+}

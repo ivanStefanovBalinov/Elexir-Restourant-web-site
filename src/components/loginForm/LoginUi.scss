@@ -1,0 +1,166 @@
+@import '../../index.scss';
+
+body {
+    background: $primary-muddy-brown;
+}
+
+input[type='text'],
+input[type='password'] {
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type='submit'] {
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    background: $third-red;
+    width: 18.5rem;
+    border: 1px solid $third-red;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+input[type='text'] {
+    border-radius: 3px;
+    height: 2.2rem;
+    width: 18rem;
+    margin-top: 1.3rem;
+    margin-left: 1.2rem;
+}
+
+.header-decorator {
+    width: 100px;
+    height: 100px;
+    background-image: url('path/to/header_decorator_dark.png');
+}
+
+.faInstagram {
+    color: #f09433;
+}
+
+.faFacebook {
+    font-size: 1.7rem;
+}
+
+.faInstagram {
+    font-size: 1.7rem;
+}
+
+.faTwitter {
+    font-size: 1.7rem;
+}
+
+.faPinterest {
+    font-size: 1.7rem;
+}
+
+.faInstagram,
+.faTwitter,
+.faPinterest {
+    margin-top: 21rem;
+    margin-left: 2rem;
+}
+
+h2 {
+    position: relative;
+    display: flex;
+    color: $primary-white;
+    margin-top: -25rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input[type='password'] {
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    width: 18rem;
+    height: 2.2rem;
+    margin-left: 1.2rem;
+}
+
+.Remember {
+    display: flex;
+    margin-left: 1.6rem;
+}
+
+h5 {
+    color: $primary-white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    background-color: $secondary-muddy-brown;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 22rem;
+    width: 22rem;
+    padding: 2rem;
+    box-shadow:
+        0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 3px 14px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Forgot {
+    margin-left: 12rem;
+    margin-top: -2.7rem;
+    text-decoration: underline;
+}
+
+.list-container {
+    display: flex;
+}
+
+.Accout {
+    margin-top: 1.5rem;
+    color: $primary-white;
+}
+
+.Accout a {
+    color: $third-red;
+}
+
+.error {
+    color: $third-red;
+    font-size: 12px;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px;
+}
+
+.HeaderOne {
+    position: relative;
+    display: flex;
+    margin-left: 2.7rem;
+    top: -2.5rem;
+}
+
+.HeaderTwo {
+    position: relative;
+    display: flex;
+    margin-left: 16rem;
+    top: -3.2rem;
+}

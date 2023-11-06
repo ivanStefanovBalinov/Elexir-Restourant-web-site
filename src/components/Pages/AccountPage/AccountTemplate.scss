@@ -1,0 +1,107 @@
+.profilePage {
+    background-color: rgba(0, 0, 0, 0.041);
+    height: 1000px;
+    margin: 75px auto 0;
+    padding: 10px 10% 0;
+
+    .profileContainer {
+        max-width: 2000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .profileNav {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 14px;
+
+            .path {
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                :hover {
+                    color: darkred;
+                }
+
+                span {
+                    margin-right: 10px;
+                }
+
+                :not(:last-child):after {
+                    content: '/';
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+
+            .currentNav {
+                text-transform: capitalize;
+                pointer-events: none;
+            }
+        }
+
+        .sections {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            --bs-gutter-x: 0;
+            gap: 20px;
+
+            .accountPages {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 0;
+                height: 100%;
+                background-color: white;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    .singlePage {
+                        height: 40px;
+                        padding: 0 20px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 15px;
+                    }
+
+                    .active {
+                        background-color: rgba(0, 0, 0, 0.041);
+                        border-left: solid 5px rgb(224, 0, 0);
+
+                        @media (max-width: 1200px) {
+                            border-left: none;
+                            border-bottom: solid 5px rgb(224, 0, 0);
+                        }
+                    }
+
+                    :hover {
+                        background-color: rgba(0, 0, 0, 0.041);
+                    }
+                }
+
+                @media (max-width: 1200px) {
+                    flex-direction: row;
+                    height: unset;
+                }
+            }
+
+            @media (max-width: 1200px) {
+                flex-direction: row;
+            }
+
+            .currentPage {
+                height: 100%;
+                background-color: white;
+            }
+        }
+    }
+}

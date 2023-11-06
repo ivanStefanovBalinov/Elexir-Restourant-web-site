@@ -1,0 +1,40 @@
+.loading-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.showchat-btn {
+    position: fixed;
+    padding: 20px 22px;
+    display: inline-block;
+    background-color: rgb(18, 101, 255);
+    z-index: 1000;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(94, 150, 255);
+    }
+
+    svg {
+        color: #fff;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .showchat-btn {
+        padding: 15px 17px;
+        bottom: 30px;
+        right: 30px;
+    }
+    .chatbot-wrapper {
+        height: 600px !important;
+        width: 300px;
+        right: 50px !important;
+    }
+}

@@ -1,0 +1,430 @@
+@import '../../../index.scss';
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    border: none;
+    background: none !important;
+    font-size: 30px;
+
+    &:hover {
+        color: red;
+    }
+}
+
+.loginButton {
+    background-color: transparent;
+    text-transform: uppercase;
+    border: none;
+    margin: 0;
+    position: relative;
+    top: -6px;
+    font-weight: 600;
+
+    &:hover {
+        background: none !important;
+        border: none !important;
+        font-weight: 600;
+        color: $third-red;
+    }
+}
+
+.login-form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    background-color: $primary-muddy-brown;
+    text-align: center;
+    height: 500px;
+    box-shadow:
+        0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 3px 14px 0 rgba(0, 0, 0, 0.19);
+
+    &:focus {
+        color: #000;
+        box-shadow: none;
+        outline: 1px solid #000;
+    }
+
+    .form {
+        padding: 3rem 1.1rem;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 20px 0px;
+        width: 100%;
+    }
+
+    input[type='email'],
+    input[type='password'] {
+        background: $primary-white;
+    }
+
+    input::placeholder {
+        color: $primary-white;
+    }
+
+    input[value=''] {
+        background-color: $secondary-muddy-brown;
+    }
+
+    input[type='email'],
+    input[type='password'] {
+        border: none;
+        border-radius: 5px;
+        color: $primary-black;
+        padding: 5px;
+    }
+
+    input[type='email']:focus-visible,
+    input[type='password']:focus-visible {
+        outline: none;
+        background: $primary-white;
+    }
+
+    input::placeholder,
+    input::placeholder:focus-visible {
+        background-color: $secondary-muddy-brown;
+        padding: 10px;
+        border: none;
+    }
+
+    .Remember {
+        display: flex;
+        margin: 20px 0 -25px 10px;
+        justify-content: center;
+
+        div {
+            display: flex;
+            margin-left: 40px;
+            position: absolute;
+            top: 140px;
+            left: 30px;
+
+            @media screen and (max-width: 750px) {
+                left: 0;
+                margin-left: 30px;
+            }
+        }
+
+        input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        p {
+            // margin: 30px 0 0 10px
+            margin: auto 0;
+        }
+    }
+
+    .BtnSingUp,
+    .BtnForgotPass {
+        position: relative;
+        text-decoration: underline;
+        background: transparent;
+        border: none;
+        font-weight: bold;
+        background-color: unset !important;
+    }
+
+    .BtnForgotPass {
+        bottom: 0px;
+        color: #0b5394;
+    }
+
+    .BtnSingUp {
+        color: $third-red;
+        margin-top: 30px;
+    }
+
+    .error {
+        color: $third-red;
+        position: relative;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+        top: 0;
+    }
+
+    .socialMedia {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 30px;
+
+        .faInstagram {
+            color: #f09433;
+        }
+
+        .faFacebook {
+            color: #0661fe;
+        }
+
+        .faTwitter {
+            color: #00d5ff;
+        }
+
+        .faPinterest {
+            color: #ff4000;
+        }
+
+        .faInstagram,
+        .faTwitter,
+        .faPinterest {
+            font-size: 1.7rem;
+        }
+    }
+
+    .loggedIn {
+        color: $primary-white;
+        font-size: 20px;
+        margin: 25px 0;
+    }
+
+    .btnLogin {
+        width: 80px;
+        border: none;
+        background-color: $primary-red;
+        color: $primary-white;
+        margin-top: 10px;
+        outline: none;
+    }
+}
+
+.login-modal:not(.order-history-modal) {
+    .modal-dialog {
+        .modal-content {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+
+            .input-container {
+                @media screen and (max-width: 750px) {
+                    padding: 0;
+                    // width: unset;
+                }
+
+                form:has(> .submit) {
+                    text-align: center;
+                }
+
+                form {
+                    h4 {
+                        // width: 80%;
+
+                        @media screen and (max-width: 750px) {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+
+            :has(> form > .Reset) {
+                text-align: center;
+            }
+
+            .app {
+                height: 400px;
+            }
+
+            #form {
+                input {
+                    margin-bottom: 35px;
+                }
+
+                input::placeholder {
+                    color: $primary-white;
+                }
+
+                input[value=''] {
+                    background-color: #2a220d;
+                }
+            }
+
+            .haveAccount {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                .BtnLogin {
+                    margin-top: -10px;
+                }
+            }
+
+            @media screen and (max-width: 750px) {
+                width: 100%;
+                margin-left: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+.modal-content:not(.details-modal-wrapper .modal-content) {
+    // background: transparent;
+    height: auto !important;
+
+    .input-container {
+        padding: 0 41px;
+        border-radius: 10px;
+        background: $primary-muddy-brown;
+
+        .form {
+            input {
+                background-color: $primary-white;
+                border: none;
+                color: $primary-black;
+                width: 100%;
+                padding: 5px;
+                margin: 5px auto;
+                border-radius: 5px;
+            }
+
+            input::placeholder {
+                color: $primary-white;
+            }
+
+            input:focus-visible {
+                outline: none;
+            }
+
+            input[value=''] {
+                background-color: $secondary-muddy-brown;
+                color: $primary-white;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            width: 100%;
+        }
+
+        .submitReg {
+            margin: 30px auto;
+            padding: 10px 50px;
+            border: none;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}
+
+.register-form {
+    padding: 75px;
+    margin: 0;
+    background-color: #3f3923;
+    border-radius: 40px;
+    box-shadow:
+        0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 3px 14px 0 rgba(0, 0, 0, 0.19);
+
+    .form-control {
+        background-color: #fff;
+        color: #000;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        border-top: none;
+        border-left: none;
+        border-radius: 0;
+        margin-bottom: 10px;
+
+        &:focus {
+            background: white;
+            color: #000;
+            box-shadow: none;
+            outline: 1px solid #000;
+            outline-offset: -1px;
+        }
+    }
+
+    .setValue {
+        background-color: #fff;
+    }
+}
+
+.show {
+    background: rgba(42, 34, 13, 0.7);
+}
+
+.BtnRegister {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.button-container {
+    margin-top: 40px;
+
+    input {
+        width: 100%;
+    }
+}
+
+.Reset {
+    width: 85%;
+    margin-bottom: 60px;
+}
+
+.BtnLogin {
+    border: none;
+    background: transparent;
+    // color: #e90015;
+    text-decoration: underline;
+}
+
+.SingUp {
+    border: none;
+    background: transparent;
+    // color: #e90015;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.ForgotPass {
+    border: none;
+    background: transparent;
+    color: #0068be;
+    font-weight: 600;
+    text-decoration: underline;
+    height: 10px;
+}
+
+section img {
+    margin: 0;
+}
+
+// span {
+//     font-size: 12px;
+//     padding: 3px;
+//     color: red;
+//     display: none;
+//     width: 340px;
+//     margin: 0 auto;
+// }
+
+input:invalid[focused='true'] {
+    border: 1px solid red;
+}
+
+input:invalid[focused='true'] ~ span {
+    display: block;
+}
+
+.loginForm {
+    padding: 20px 30px;
+}

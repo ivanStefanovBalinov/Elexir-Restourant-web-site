@@ -1,0 +1,36 @@
+$prevArrowImg: url(src/assets/img/btn-prev.png);
+$nextArrowImg: url(src/assets/img/btn-next.png);
+
+.slick-prev,
+.slick-next {
+    z-index: 1;
+    width: auto;
+}
+
+.slick-prev {
+    left: 1%;
+}
+
+.slick-next {
+    right: 1%;
+}
+
+.slick-prev::before {
+    background-image: $prevArrowImg;
+    content: '';
+    width: 6vw;
+    height: 6vw;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.slick-next::before {
+    background-image: $nextArrowImg;
+    content: '';
+    width: 6vw;
+    height: 6vw;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 100%;
+}

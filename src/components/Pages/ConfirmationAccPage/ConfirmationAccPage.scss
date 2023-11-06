@@ -1,0 +1,78 @@
+@import '../../../index.scss';
+
+.confirmation-acc-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../../assets/img/header_slider03.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .registration-message-wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.418);
+        width: 50%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        animation: messageSlidIn 1s 1 linear;
+
+        @keyframes messageSlidIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-150%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .registration-message-h2 {
+            text-align: center;
+        }
+        .registration-message-p {
+            color: white;
+            font-size: 1.5rem;
+            span {
+                color: $secondary-green;
+            }
+        }
+        .registration-message-icon {
+            color: $primary-green;
+            font-size: 4rem;
+            visibility: hidden;
+            animation: checkFadeIn 0.7s 1 linear;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+
+            @keyframes checkFadeIn {
+                0% {
+                    opacity: 0;
+                    font-size: 1rem;
+                    visibility: visible;
+                }
+                100% {
+                    opacity: 1;
+                    font-size: 4rem;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .confirmation-acc-wrapper {
+        .registration-message-wrapper {
+            width: 85%;
+        }
+    }
+}

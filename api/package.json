@@ -1,0 +1,36 @@
+{
+    "name": "boilerplate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "express-async-errors": "^3.1.1",
+        "express-flash": "^0.0.2",
+        "express-session": "^1.17.3",
+        "googleapis": "^120.0.0",
+        "http-status-codes": "^2.2.0",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^7.1.0",
+        "mongoose-paginate": "^5.0.3",
+        "nodemailer": "^6.9.3",
+        "nodemailer-express-handlebars": "^6.1.0",
+        "npm": "^9.8.0",
+        "passport": "^0.6.0",
+        "passport-local": "^1.0.0",
+        "prettier": "^3.0.3",
+        "stripe": "^12.16.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}

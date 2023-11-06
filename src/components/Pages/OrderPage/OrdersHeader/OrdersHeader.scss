@@ -1,0 +1,30 @@
+.orderHeader {
+    height: 30vh;
+    background: url(src/assets/img/order_img.png) bottom;
+    background-size: cover;
+    position: relative;
+    min-height: 180px;
+
+    .orderMsg {
+        color: rgba(255, 255, 255, 0.897);
+        font-size: 30px;
+        font-style: italic;
+        position: absolute;
+        bottom: 2%;
+        font-family: 'Bitter Italic';
+        width: 600px;
+        left: 5%;
+        text-align: left;
+
+        @media screen and (max-width: 1000px) {
+            width: 50%;
+            font-size: 15px;
+        }
+
+        span {
+            vertical-align: sub;
+            color: red;
+            font-size: 20px;
+        }
+    }
+}

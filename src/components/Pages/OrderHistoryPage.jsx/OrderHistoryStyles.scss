@@ -1,0 +1,146 @@
+@import '../../../index.scss';
+
+.orderhistory-page-wrapper {
+    background-color: $primary-white;
+
+    h2 {
+        color: $primary-black;
+        text-align: left;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2.5em;
+        margin: 50px 0 40px 0 !important;
+    }
+
+    .show-more-button {
+        border-radius: 0 !important;
+        font-weight: bold;
+        width: 150px;
+        padding: 12px 18px;
+    }
+
+    .orders-wrapper {
+        padding: 30px 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .dark-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    //Order Item Component
+    .item-heading-wrapper {
+        margin: 0 auto 30px;
+
+        h3 {
+            text-align: left;
+            color: $third-red;
+            font-weight: bold;
+            font-size: 1.7em;
+        }
+
+        .order-item {
+            border-radius: 10px;
+            background-color: $secondary-light-grey;
+            display: flex;
+            align-items: center;
+
+            .order-img {
+                width: 250px;
+                height: 150px;
+
+                img {
+                    border-radius: 10px 0 0 10px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .order-details {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .order-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-left: 20px;
+                    color: #82030f;
+
+                    .delivery-time {
+                        color: $primary-black;
+                    }
+                }
+
+                button {
+                    background-color: #82030f;
+                    color: $primary-white;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 0;
+                    transition: background 0.3s ease-in-out;
+                    margin-right: 20px;
+
+                    &:hover {
+                        background-color: #a23e4a;
+                    }
+                }
+            }
+        }
+    }
+
+    //Side Images
+    .right-side-img,
+    .left-side-img,
+    .second-left-side-img,
+    .dessert-right-side-img {
+        position: absolute;
+        height: auto;
+        max-height: 550px;
+        max-width: 300px;
+        opacity: 0.6;
+    }
+
+    .left-side-img {
+        left: 0%;
+        top: 10%;
+    }
+
+    .right-side-img {
+        right: 0%;
+        top: 25%;
+    }
+}
+
+//Mobile Styles
+@media screen and (max-width: 900px) {
+    .orderhistory-page-wrapper {
+        .order-item {
+            .order-details {
+                flex-direction: column;
+                align-items: center !important;
+
+                button {
+                    margin: 0 auto !important;
+                }
+
+                .order-text {
+                    align-items: center !important;
+
+                    strong {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

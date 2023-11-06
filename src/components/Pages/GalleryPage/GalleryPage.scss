@@ -1,0 +1,317 @@
+@import '../../../index.scss';
+
+@keyframes leftImagesAnimation {
+    0% {
+        left: -30%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes rightImagesAnimation {
+    0% {
+        right: -30%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+
+.gallery-page-wrapper {
+    padding: 100px 0;
+    position: relative;
+
+    .right-side-img,
+    .left-side-img,
+    .second-left-side-img,
+    .dessert-right-side-img {
+        position: absolute;
+        height: auto;
+        max-height: 790px;
+        max-width: 305px;
+        transition: ease-in all 1.5s;
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+
+    .left-side-img {
+        left: 0%;
+        top: -2%;
+        max-height: 740px;
+        animation: leftImagesAnimation 2s ease-in;
+    }
+
+    .right-side-img {
+        right: 0%;
+        top: 20%;
+        max-height: 720px;
+        animation: rightImagesAnimation 2s ease-in;
+    }
+
+    .second-left-side-img {
+        left: 0%;
+        top: 50%;
+        max-height: 740px;
+    }
+
+    .dessert-right-side-img {
+        top: 87%;
+        right: 0%;
+    }
+
+    h2 {
+        color: $third-red;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+    }
+
+    h5 {
+        color: $secondary-muddy-brown;
+        margin-top: 10px;
+    }
+
+    h3 {
+        text-transform: capitalize;
+        color: rgb(86, 47, 28);
+        font-size: 2em;
+    }
+
+    .gallery-image-wrapper {
+        width: 320px;
+        height: 270px;
+        border: 1px solid $primary-grey;
+        position: relative;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            position: absolute;
+
+            transition: background-color 0.3s ease;
+        }
+
+        &:hover::before {
+            background-color: rgba(151, 151, 151, 0.6);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .view-more-btn {
+            position: absolute;
+            display: flex;
+            top: 40%;
+            left: 30%;
+            width: 120px;
+            text-decoration: none;
+            color: $primary-white !important;
+            cursor: pointer;
+            z-index: 1;
+
+            span {
+                position: absolute;
+                left: 25%;
+                top: 15%;
+            }
+
+            &:hover {
+                transition: color 5s ease-in-out;
+            }
+
+            .icon {
+                display: inline-block;
+                background: radial-gradient(
+                    circle at 10.6% 22.1%,
+                    rgb(206, 18, 18) 0%,
+                    rgb(122, 21, 21) 100.7%
+                );
+                padding: 7px 14px;
+                border-radius: 50px;
+                width: 40px;
+                transition: width 0.3s ease;
+            }
+
+            span {
+                font-weight: bold;
+                margin-left: 10px;
+                color: white !important;
+            }
+
+            &:hover .icon {
+                width: 100%;
+
+                svg {
+                    margin-left: 80px;
+                    transform: rotateY(180deg);
+                    transition: 1s ease;
+                }
+            }
+
+            &:hover span {
+                color: $primary-white;
+                z-index: 5;
+            }
+        }
+    }
+
+    .col-lg-12:nth-of-type(2) {
+        margin-right: 120px !important;
+    }
+
+    .gallery-item-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .restaurant-img {
+        width: 500px;
+        height: 350px;
+
+        .view-more-btn {
+            left: 40%;
+            top: 45%;
+        }
+    }
+}
+
+//Modal
+.modal-header {
+    .btn-close {
+        background-color: $primary-white;
+    }
+}
+
+.modal-content {
+    background-color: $secondary-muddy-brown;
+    width: 700px;
+    right: 20%;
+}
+
+.modal-header {
+    .h4 {
+        text-align: center;
+        margin: 0 auto;
+        font-weight: bold;
+        color: $primary-red;
+        font-size: 2em;
+    }
+
+    button {
+        margin-left: 0 !important;
+    }
+}
+
+.modal-image-wrapper {
+    width: 450px;
+    height: 350px;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.modal-product-description {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        gap: 30px;
+    }
+
+    .restaurant-img {
+        width: 400px !important;
+        height: 350px !important;
+        margin-left: 100px !important;
+    }
+
+    .left-side-img,
+    .right-side-img,
+    .second-left-side-img,
+    .dessert-right-side-img {
+        max-height: 650px !important;
+    }
+
+    .left-side-img {
+        top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    h2 {
+        font-size: 2em !important;
+    }
+
+    h5 {
+        font-size: 1em !important;
+    }
+
+    ._headerDecorator_1u99p_115 {
+        margin-bottom: -50px !important;
+    }
+
+    .gallery-image-wrapper {
+        margin: 0 auto;
+    }
+
+    ._headerDecorator_1u99p_115 {
+        img {
+            width: 25px;
+        }
+    }
+
+    .left-side-img,
+    .right-side-img,
+    .second-left-side-img,
+    .dessert-right-side-img {
+        display: none;
+    }
+
+    .modal-content {
+        width: 450px;
+        margin-left: 130px;
+
+        .modal-image-wrapper {
+            width: 300px;
+            height: 250px;
+        }
+
+        .modal-product-description {
+            font-size: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    ._headerDecorator_1cuf3_115 {
+        margin-left: 20px !important;
+    }
+
+    .restaurant-img {
+        width: 370px !important;
+        height: 300px !important;
+        margin-left: 60px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 350px;
+        margin-left: 80px;
+        margin-top: 150px;
+    }
+}

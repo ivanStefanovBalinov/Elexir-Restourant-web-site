@@ -1,0 +1,110 @@
+@import '../../../../../../index.scss';
+
+.chair-wrapper {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+
+    .chair-backrest {
+        height: 34.5px;
+        width: 5px;
+        background-color: #911111;
+        position: absolute;
+        top: -15%;
+        z-index: 5;
+        border-radius: 5px;
+        border: 0.5px solid black;
+        pointer-events: none;
+    }
+
+    .chair-primary-class {
+        width: 25px;
+        height: 25px;
+        background-color: #b32020;
+        border-radius: 3px;
+        position: absolute;
+        text-align: center;
+        cursor: pointer;
+        pointer-events: none;
+
+        .chair-number {
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            padding-bottom: 4px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            border: 0.5px solid #130101;
+            border-radius: 5px;
+            background-color: #b32020;
+            z-index: 2;
+        }
+
+        &::before {
+            top: -20%;
+            left: 0%;
+        }
+
+        &::after {
+            top: 100%;
+            left: 0%;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .chair-wrapper {
+        width: 20px;
+        height: 20px;
+
+        .chair-backrest {
+            height: 27px;
+        }
+        .chair-primary-class {
+            width: 20px;
+            height: 20px;
+            .chair-number {
+                padding-bottom: 1px;
+                font-size: 0.7rem;
+            }
+            &::before,
+            &::after {
+                width: 20px;
+                height: 4px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .chair-wrapper {
+        width: 10px;
+        height: 10px;
+
+        .chair-backrest {
+            height: 14px;
+            top: -21%;
+            width: 3px;
+        }
+        .chair-primary-class {
+            width: 10px;
+            height: 10px;
+            .chair-number {
+                padding-bottom: 1px;
+                font-size: 0.4rem;
+            }
+            &::before,
+            &::after {
+                width: 10px;
+                height: 2px;
+            }
+        }
+    }
+}
