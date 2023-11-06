@@ -19,20 +19,15 @@ Before you begin, ensure you have Node.js and npm (Node Package Manager) install
 ```bash
 git clone https://github.com/yourusername/elixir-restaurant.git
 
-
 1.Change into the project directory:
-bash
 cd elixir-restaurant
 
 2.Install project dependencies using npm:
-bash
 npm install
 
 ##Running the Application
 
 To start the development server and run the Elixir Restaurant web application, use the following command:
-
-bash
 npm run dev
 
 ##Reservation Form and Backend
@@ -42,7 +37,6 @@ This project includes a reservation form and schema for handling reservations. T
 ##Custom Components
 
 Some of the components in this project have been custom-built to suit the specific needs of the Elixir Restaurant web application.
-
 
 
 Enjoy your Elixir Restaurant experience!
