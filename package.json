@@ -3,6 +3,7 @@
     "private": true,
     "version": "1.0.0",
     "type": "module",
+    "proxy": "http://localhost:3000",
     "scripts": {
         "dev": "vite",
         "build": " npm install && npm install --prefix api && vite build",
