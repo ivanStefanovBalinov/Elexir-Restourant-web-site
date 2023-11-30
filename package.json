@@ -1,13 +1,14 @@
 {
-    "name": "bootcamp-js-23",
+    "name": "Elixir Restaurant",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": " npm install && npm install --prefix api && vite build",
         "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "start": "node api/app.js"
     },
     "dependencies": {
         "@emotion/styled": "^11.11.0",
