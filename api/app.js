@@ -42,8 +42,9 @@ app.use(
             'http://127.0.0.1:5173',
             'http://localhost:5173',
             'https://oauth2.googleapis.com',
+            "https://elixir-restaurant-web.onrender.com",
         ],
-        cridentials: true,
+        credentials: true,
     }),
 );
 

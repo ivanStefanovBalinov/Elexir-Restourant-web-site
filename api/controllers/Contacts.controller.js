@@ -1,4 +1,4 @@
-const ContactMail = require('../models/Contact-Schema/Contact.model');
+const ContactMail = require("../models/Contact-Schema/contact.model");
 const { StatusCodes } = require('http-status-codes');
 const { BadRequestError } = require('../errors');
 const sendMail = require('./EmailSender');
