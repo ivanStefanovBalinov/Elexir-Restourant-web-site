@@ -9,7 +9,7 @@
         "build": " npm install && npm install --prefix api && vite build",
         "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
-        "start": "vite"
+        "start": "vite && npm start --prefix api"
     },
     "dependencies": {
         "@emotion/styled": "^11.11.0",
