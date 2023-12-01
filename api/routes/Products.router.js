@@ -3,7 +3,7 @@ const router = express.Router();
 const Products = require('../models/StripeProducts-Schema/Products.model');
 const {
     addProduct,
-    getProuct,
+    getProduct,
     updateProduct,
     getAllProducts,
     deleteProduct,
@@ -13,7 +13,7 @@ const {
 router.post('/addProduct', addProduct);
 router.post('/updateProduct/:id', updateProduct);
 router.get('/all', getAllProducts);
-router.get('/all/:id', getProuct);
+router.get('/all/:id', getProduct);
 router.delete('/all/delete/:id', deleteProduct);
 router.get('/prices', getAllPrices);
 

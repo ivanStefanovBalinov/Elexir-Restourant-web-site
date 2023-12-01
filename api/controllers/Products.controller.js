@@ -28,7 +28,7 @@ const addProduct = async (req, res) => {
     }
 };
 
-const getProuct = async (req, res) => {
+const getProduct = async (req, res) => {
     const {
         params: { id: productId },
     } = req;
@@ -94,7 +94,7 @@ const getAllPrices = async (req, res) => {
 
 module.exports = {
     addProduct,
-    getProuct,
+    getProduct,
     updateProduct,
     getAllProducts,
     deleteProduct,

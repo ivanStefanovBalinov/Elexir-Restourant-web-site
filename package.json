@@ -5,11 +5,10 @@
     "type": "module",
     "proxy": "http://localhost:3000",
     "scripts": {
-        "dev": "vite",
+        "start": "vite",
         "build": " npm install && npm install --prefix api && vite build",
         "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview",
-        "start": "node api/app.js && vite"
+        "preview": "vite preview"
     },
     "dependencies": {
         "@emotion/styled": "^11.11.0",
